@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { asset } from "../../config";
 import { Reveal, SectionHeading } from "../ui";
 
-/** A region of docs/images/app.png (1200 x 880), in source pixels. */
+/** A region of public/app.webp (1200 x 940, the game page), in source pixels. */
 interface Region {
   x: number;
   y: number;
@@ -37,7 +37,7 @@ const tabs: { id: string; label: string; title: string; body: string; region: Re
     label: "At a glance",
     title: "The numbers that matter",
     body: "Deaths (and how many were falls), boss defeats with your fastest time, attempts with the average length, and the lowest HP you've taken the boss to.",
-    region: { x: 294, y: 72, w: 882, h: 96 },
+    region: { x: 263, y: 229, w: 914, h: 100 },
     alt: "Counters: 23 deaths, 2 from falls; 2 boss defeats, fastest 3:12; 26 attempts, average 1:41; best boss HP 0%.",
   },
   {
@@ -45,7 +45,7 @@ const tabs: { id: string; label: string; title: string; body: string; region: Re
     label: "Live fight",
     title: "Watch the fight as it happens",
     body: "Live HP bars for you and the auto-detected boss, plus the current attempt's timer, damage dealt and taken, hits and the boss's lowest HP.",
-    region: { x: 294, y: 189, w: 479, h: 267 },
+    region: { x: 263, y: 345, w: 507, h: 271 },
     alt: "Live fight panel with the boss HP bar at 37%, the player HP bar, and attempt 27 stats.",
   },
   {
@@ -53,7 +53,7 @@ const tabs: { id: string; label: string; title: string; body: string; region: Re
     label: "Training mods",
     title: "Toggle what you need",
     body: "Player can't die, boss can't die, falls count as deaths (with an adjustable fall distance) and let the boss die once for scripted phase changes. Each has a hotkey.",
-    region: { x: 793, y: 189, w: 383, h: 353 },
+    region: { x: 779, y: 345, w: 390, h: 357 },
     alt: "Training mods panel with switches for player can't die, boss can't die, falling counts as death with a fall distance slider, and let boss die once.",
   },
   {
@@ -61,7 +61,7 @@ const tabs: { id: string; label: string; title: string; body: string; region: Re
     label: "Session",
     title: "See the whole session",
     body: "Totals across every attempt: damage, hits, healing, falls, fastest defeat and average attempt. Start a new session any time with F9.",
-    region: { x: 294, y: 479, w: 479, h: 203 },
+    region: { x: 263, y: 635, w: 507, h: 209 },
     alt: "Session panel with total damage dealt and taken, hits landed and taken, healing, falls, fastest defeat and average attempt.",
   },
 ];

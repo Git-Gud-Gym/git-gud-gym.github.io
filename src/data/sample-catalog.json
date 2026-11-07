@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "generatedAt": "2026-11-07T00:00:00Z",
-  "repo": "Git-Gud-Gym/git-gud-gym",
+  "repo": "Git-Gud-Gym/registry",
   "app": null,
   "modules": [
     {
@@ -23,7 +23,9 @@
       "game": {
         "exe": "eldenring.exe",
         "steamAppId": 1245620,
-        "testedPatches": ["1.12.0"]
+        "testedPatches": [
+          "1.12.0"
+        ]
       },
       "files": []
     },
