@@ -12,8 +12,9 @@ neither you nor the boss can die, and it logs every attempt so you can watch you
 ## 1. Download Git Gud Gym
 
 Grab the latest release from the [releases page]({{RELEASES_URL}}) and extract the zip anywhere you like,
-for example `C:\Games\GitGudGym`. There's no installer, and nothing is written outside that folder except
-the files the app creates next to your game when you ask it to (see [Playing offline](/docs/offline)).
+for example `C:\Games\GitGudGym`. There's no installer. The app keeps its settings, installed game modules
+and your stats in `%LOCALAPPDATA%\GitGudGym`, and only touches your game folder when you ask it to (see
+[Playing offline](/docs/offline)).
 
 > [!NOTE]
 > Releases up to **Elden Ring v0.2.0** ship as a single `GitGudGym-EldenRing-v*.zip` that contains the app
