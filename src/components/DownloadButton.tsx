@@ -1,7 +1,7 @@
 import { Download } from "lucide-react";
 import { appDownload, formatBytes, type Catalog } from "../catalog";
 
-/** Primary CTA. Points at the hub app's zip when the catalog has one, else the releases page. */
+/** Primary CTA. Downloads GitGudGym.exe when the catalog has a release, else opens the releases page. */
 export default function DownloadButton({ catalog, className = "" }: { catalog: Catalog; className?: string }) {
   const dl = appDownload(catalog);
   const meta = catalog.app

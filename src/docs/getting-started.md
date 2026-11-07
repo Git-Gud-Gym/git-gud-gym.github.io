@@ -11,14 +11,15 @@ neither you nor the boss can die, and it logs every attempt so you can watch you
 
 ## 1. Download Git Gud Gym
 
-Grab the latest release from the [releases page]({{RELEASES_URL}}) and extract the zip anywhere you like,
-for example `C:\Games\GitGudGym`. There's no installer. The app keeps its settings, installed game modules
-and your stats in `%LOCALAPPDATA%\GitGudGym`, and only touches your game folder when you ask it to (see
-[Playing offline](/docs/offline)).
+Download **[GitGudGym.exe]({{RELEASES_URL}}/latest/download/GitGudGym.exe)** and put it anywhere you like,
+for example `C:\Games\GitGudGym`. It's a single file with no installer. The app keeps its settings, installed
+game modules and your stats in `%LOCALAPPDATA%\GitGudGym`, and only touches your game folder when you ask it to
+(see [Playing offline](/docs/offline)).
 
 > [!NOTE]
-> Releases up to **Elden Ring v0.2.0** ship as a single `GitGudGym-EldenRing-v*.zip` that contains the app
-> and the Elden Ring module together. Extract it and run `GitGudGym.exe`; there is no separate module to install.
+> Windows SmartScreen may say it "protected your PC", because the app isn't code-signed yet. Click
+> **More info → Run anyway**. Every [release]({{RELEASES_URL}}) lists the exe's SHA-256 in `SHA256SUMS.txt`
+> if you want to check the download.
 
 ## 2. Run the app
 

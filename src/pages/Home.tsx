@@ -16,7 +16,7 @@ const steps = [
   {
     icon: MonitorDown,
     title: "Install Git Gud Gym",
-    body: "Download the app, extract it anywhere and run GitGudGym.exe. It asks for administrator rights so it can launch and attach to your game.",
+    body: "Download GitGudGym.exe, a single file with no installer, and run it. It asks for administrator rights so it can launch and attach to your game.",
   },
   {
     icon: Library,
