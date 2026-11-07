@@ -1,13 +1,22 @@
 version: 2
 updates:
+  # Minor and patch npm updates arrive as one PR per month. Major versions (React, Vite, Tailwind, ...)
+  # change APIs and are migrated deliberately, by hand.
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: monthly
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
     groups:
       dependencies:
         patterns: ["*"]
+  # All GitHub Actions bumps arrive as one PR per month.
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: monthly
+    groups:
+      actions:
+        patterns: ["*"]
