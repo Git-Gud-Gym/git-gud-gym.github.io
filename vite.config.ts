@@ -1,4 +1,4 @@
-import { copyFileSync } from "node:fs";
+import { copyFileSync, mkdirSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
@@ -11,8 +11,8 @@ function resolveBase(raw: string | undefined): string {
 }
 
 /**
- * GitHub Pages has no SPA fallback. Serving a copy of index.html as 404.html makes
- * deep links like /docs/stats load the app, which then renders the right route.
+ * GitHub Pages has no SPA fallback. Every known route gets its own copy of index.html so it is
+ * served with HTTP 200 (indexable, link previews work); 404.html covers everything else.
  */
 function spaFallback(): Plugin {
   let outDir = "dist";
@@ -23,7 +23,15 @@ function spaFallback(): Plugin {
       outDir = resolve(config.root, config.build.outDir);
     },
     closeBundle() {
-      copyFileSync(resolve(outDir, "index.html"), resolve(outDir, "404.html"));
+      const index = resolve(outDir, "index.html");
+      const docs = readdirSync(resolve(__dirname, "src/docs"))
+        .filter((f) => f.endsWith(".md"))
+        .map((f) => `docs/${f.slice(0, -3)}`);
+      for (const route of ["games", "docs", ...docs]) {
+        mkdirSync(resolve(outDir, route), { recursive: true });
+        copyFileSync(index, resolve(outDir, route, "index.html"));
+      }
+      copyFileSync(index, resolve(outDir, "404.html"));
     },
   };
 }
